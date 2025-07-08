@@ -1,0 +1,19 @@
+services:
+  ej2flask:
+    image: ej2flask
+    build:
+      context: ./mqtt_controller
+    container_name: ej2flask
+    environment:
+      - FLASK_SECRET_KEY=${FLASK_SECRET_KEY}
+    ports:
+      - "8001:8000"
+    restart: unless-stopped
+    networks:
+      - ej2flask-network
+
+      
+networks:
+  ej2flask-network:
+    external: true
+    name: docker_iot_default
