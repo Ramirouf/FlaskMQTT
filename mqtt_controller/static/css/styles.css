@@ -1,0 +1,19 @@
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adds space between label and input */
+}
+
+.control-group .form-label {
+  flex: 0 0 120px; /* Gives the label a fixed width. Adjust as needed. */
+  margin-bottom: 0; /* Override Bootstrap's default margin on form-label */
+}
+
+/*
+Positions the action buttons to the right side of the container.
+*/
+.button-group {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 0.5rem; /* Adds a small space between the buttons */
+}

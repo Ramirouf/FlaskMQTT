@@ -6,6 +6,11 @@ services:
     container_name: ej2flask
     environment:
       - FLASK_SECRET_KEY=${FLASK_SECRET_KEY}
+      - SERVIDOR=${SERVIDOR}
+      - TOPICO=${TOPICO}
+      - PUERTO_MQTTS=${PUERTO_MQTTS}
+      - MQTT_USR=${MQTT_USR}
+      - MQTT_PASS=${MQTT_PASS}
     ports:
       - "8001:8000"
     restart: unless-stopped
